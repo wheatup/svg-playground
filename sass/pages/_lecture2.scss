@@ -1,0 +1,12 @@
+.lecture2{
+	svg {
+		.monkey {
+			stroke: green;
+			stroke-width: 2px;
+			stroke-dashoffset: -2000;
+			stroke-dasharray: 2000;
+			animation: monkey 3s forwards;
+		}
+	}
+
+}

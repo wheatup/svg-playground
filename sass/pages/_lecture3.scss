@@ -1,0 +1,10 @@
+.lecture3 {
+	.autograph {
+		stroke: black;
+		stroke-width: 2px;
+		fill: none;
+		stroke-dashoffset: -590;
+		stroke-dasharray: 590;
+		animation: draw-autograph 3s ease-in reverse forwards;
+	}
+}

@@ -1,0 +1,99 @@
+@keyframes draw-square {
+  from {
+    stroke-dashoffset: -380;
+    transform: rotate(0deg); }
+  to {
+    stroke-dashoffset: 0;
+    transform: rotate(360deg); } }
+
+@keyframes draw-hexagon {
+  from {
+    stroke-dashoffset: -267;
+    transform: rotate(0deg); }
+  to {
+    stroke-dashoffset: 0;
+    transform: rotate(-360deg); } }
+
+@keyframes monkey {
+  from {
+    stroke-dashoffset: -2000; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes draw-autograph {
+  from {
+    stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 590; } }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.lecture1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .lecture1 #shapes .anim {
+    --length: 100;
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: calc(var(--length) * -1);
+    stroke-width: 2px;
+    fill: none;
+    transform-origin: 50% 50%; }
+  .lecture1 #shapes .hexagon {
+    --length: 267;
+    stroke: #6a5;
+    animation: draw-hexagon 2s ease-out forwards; }
+  .lecture1 #shapes .square {
+    --length: 380;
+    stroke: #67a;
+    animation: draw-square 2s ease-out forwards; }
+
+.lecture2 svg .monkey {
+  stroke: green;
+  stroke-width: 2px;
+  stroke-dashoffset: -2000;
+  stroke-dasharray: 2000;
+  animation: monkey 3s forwards; }
+
+.lecture3 .autograph {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+  stroke-dashoffset: -590;
+  stroke-dasharray: 590;
+  animation: draw-autograph 3s ease-in reverse forwards; }
+
+.lecture4 .twitter-icon-group .twitter-outline {
+  transform-origin: 22% 50%;
+  transition: all 0.5s ease-out; }
+
+.lecture4 .twitter-icon-group .twitter-icon {
+  transform-origin: 22% 50%;
+  transition: all 0s; }
+
+.lecture4 .twitter-icon-group:hover .twitter-outline {
+  transform: scale(0);
+  opacity: 0; }
+
+.lecture4 .twitter-icon-group:hover .twitter-icon {
+  transition: all 0.2s ease-in .1s;
+  transform: scale(3);
+  stroke: #4099ff;
+  opacity: 0; }

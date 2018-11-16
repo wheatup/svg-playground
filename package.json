@@ -1,0 +1,23 @@
+{
+	"name": "svg-playground",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch": "node-sass ./sass/style.scss ./css/style.css -w",
+		"start": "npm-run-all --parallel devserver watch:sass",
+		"compile:sass": "node-sass ./sass/style.scss ./css/style.comp.css",
+		"prefix:css": "postcss ./css/style.comp.css -o ./css/style.prefix.css -u autoprefixer",
+		"compress:css": "node-sass ./css/style.prefix.css ./css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^9.3.1",
+		"concat": "^1.0.3",
+		"node-sass": "^4.5.3",
+		"postcss-cli": "^6.0.1"
+	}
+}

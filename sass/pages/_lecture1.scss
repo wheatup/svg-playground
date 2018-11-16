@@ -1,0 +1,36 @@
+.lecture1 {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: $color-bg;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	#shapes {
+		.anim {
+			--length: 100;
+			stroke-dasharray: var(--length);
+			stroke-dashoffset: calc(var(--length) * -1);
+			stroke-width: 2px;
+			fill: none;
+			transform-origin: 50% 50%;
+		}
+	
+		.hexagon {
+			--length: 267;
+			stroke: #6a5;
+			animation: draw-hexagon 2s ease-out forwards;
+		}
+	
+		.square {
+			--length: 380;
+			stroke: #67a;
+			animation: draw-square 2s ease-out forwards;
+		}
+	}
+}
+
+
+

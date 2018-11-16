@@ -1,0 +1,27 @@
+.lecture4 {
+	.twitter-icon-group {
+		.twitter-outline {
+			transform-origin: 22% 50%;
+			transition: all 0.5s ease-out;
+		}
+
+		.twitter-icon {
+			transform-origin: 22% 50%;
+			transition: all 0s;
+		}
+
+		&:hover {
+			.twitter-outline {
+				transform: scale(0);
+				opacity: 0;
+			}
+
+			.twitter-icon {
+				transition: all 0.2s ease-in .1s;
+				transform: scale(3);
+				stroke: #4099ff;
+				opacity: 0;
+			}
+		}
+	}
+}

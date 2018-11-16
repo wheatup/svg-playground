@@ -1,0 +1,47 @@
+@keyframes draw-square {
+	from {
+		stroke-dashoffset: -380;
+		transform: rotate(0deg);
+	}
+
+	to {
+		stroke-dashoffset: 0;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes draw-hexagon {
+	from {
+		stroke-dashoffset: -267;
+		transform: rotate(0deg);
+	}
+
+	to {
+		stroke-dashoffset: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+//--------------------
+
+@keyframes monkey {
+	from {
+		stroke-dashoffset: -2000;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+//--------------------
+
+@keyframes draw-autograph {
+	from {
+		stroke-dashoffset: 0;
+	}
+
+	to {
+		stroke-dashoffset: 590;
+	}
+}
