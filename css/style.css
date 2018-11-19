@@ -80,20 +80,58 @@ body {
   stroke-dasharray: 590;
   animation: draw-autograph 3s ease-in reverse forwards; }
 
-.lecture4 .twitter-icon-group .twitter-outline {
-  transform-origin: 22% 50%;
-  transition: all 0.5s ease-out; }
+.lecture4 .twitter-icon-group {
+  transform-origin: 50% 50%; }
+  .lecture4 .twitter-icon-group:hover {
+    cursor: pointer; }
+    .lecture4 .twitter-icon-group:hover .twitter-outline {
+      transform: scale(0);
+      opacity: 0; }
+    .lecture4 .twitter-icon-group:hover .twitter-icon {
+      transition: all 0.2s ease-in .1s;
+      transform: scale(3);
+      stroke: #4099ff;
+      opacity: 0; }
+  .lecture4 .twitter-icon-group .twitter-outline, .lecture4 .twitter-icon-group .twitter-icon {
+    transform-origin: 22% 50%;
+    transition: all 0.5s ease-out; }
 
-.lecture4 .twitter-icon-group .twitter-icon {
-  transform-origin: 22% 50%;
-  transition: all 0s; }
+.lecture4 .youtube-icon-group:hover {
+  cursor: pointer; }
+  .lecture4 .youtube-icon-group:hover .youtube-outline {
+    transform: scale(1.2); }
+  .lecture4 .youtube-icon-group:hover .youtube-inner-circle {
+    fill: #f26768; }
+  .lecture4 .youtube-icon-group:hover .youtube-icon {
+    stroke: #fff; }
 
-.lecture4 .twitter-icon-group:hover .twitter-outline {
-  transform: scale(0);
+.lecture4 .youtube-icon-group .youtube-icon, .lecture4 .youtube-icon-group .youtube-outline, .lecture4 .youtube-icon-group .youtube-inner-circle {
+  transition: .3s all;
+  transform-origin: 50% 50%; }
+
+.lecture4 .facebook-icon-group .facebook-outline, .lecture4 .facebook-icon-group .facebook-detail {
+  transition: .3s all;
+  transform-origin: 78% 50%; }
+
+.lecture4 .facebook-icon-group .facebook-detail {
   opacity: 0; }
 
-.lecture4 .twitter-icon-group:hover .twitter-icon {
-  transition: all 0.2s ease-in .1s;
-  transform: scale(3);
-  stroke: #4099ff;
-  opacity: 0; }
+.lecture4 .facebook-icon-group:hover {
+  cursor: pointer; }
+  .lecture4 .facebook-icon-group:hover .facebook-outline {
+    transform: scale(1.8);
+    opacity: 0; }
+  .lecture4 .facebook-icon-group:hover .facebook-detail {
+    opacity: 1;
+    transform: scale(0.8); }
+
+.lecture6 {
+  background-color: #666; }
+
+@keyframes scan {
+  from {
+    transform: translateX(60px); }
+  to {
+    transform: translateX(500px); } }
+  .lecture6 svg circle {
+    animation: scan 3s alternate ease-in-out infinite; }

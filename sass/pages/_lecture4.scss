@@ -1,16 +1,8 @@
 .lecture4 {
 	.twitter-icon-group {
-		.twitter-outline {
-			transform-origin: 22% 50%;
-			transition: all 0.5s ease-out;
-		}
-
-		.twitter-icon {
-			transform-origin: 22% 50%;
-			transition: all 0s;
-		}
-
 		&:hover {
+			cursor: pointer;
+
 			.twitter-outline {
 				transform: scale(0);
 				opacity: 0;
@@ -23,5 +15,61 @@
 				opacity: 0;
 			}
 		}
+
+		.twitter-outline, .twitter-icon {
+			transform-origin: 22% 50%;
+			transition: all 0.5s ease-out;
+		}
+		transform-origin: 50% 50%;
+	}
+
+	.youtube-icon-group {
+		&:hover {
+			cursor: pointer;
+			
+			.youtube-outline {
+				transform: scale(1.2);
+			}
+
+			.youtube-inner-circle {
+				fill: #f26768;
+			}
+
+			.youtube-icon {
+				stroke: #fff;
+			}
+		}
+
+		.youtube-icon, .youtube-outline, .youtube-inner-circle {
+			transition: .3s all;
+			transform-origin: 50% 50%;
+		}
+	}
+
+	.facebook-icon-group {
+		.facebook-outline, .facebook-detail {
+			transition: .3s all;
+			transform-origin: 78% 50%;
+		}
+
+		.facebook-detail {
+			opacity: 0;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.facebook-outline {
+				transform: scale(1.8);
+				opacity: 0;
+			}
+
+			.facebook-detail {
+				opacity: 1;
+				transform: scale(.8);
+			}
+		}
+
+		
 	}
 }

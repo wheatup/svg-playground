@@ -1,0 +1,20 @@
+.lecture6{
+	background-color: #666;
+
+	@keyframes scan {
+		from {
+			transform: translateX(60px);
+		}
+
+		to {
+			transform: translateX(500px);
+		}
+	}
+
+	svg {
+		circle {
+			animation: scan 3s alternate ease-in-out infinite;
+		}
+	}
+}
+
